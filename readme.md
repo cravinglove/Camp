@@ -19,3 +19,8 @@
 
 * make header/title beautiful
 * display campgrounds in grid system
+
+# Style the navbar and form
+
+* make navbar that all pages can use
+* have the form look some betters
