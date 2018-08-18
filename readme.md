@@ -14,3 +14,8 @@
 * Add campground POST route
 * install body-parser
 * show forms that can handle add request
+
+# Style the campground page
+
+* make header/title beautiful
+* display campgrounds in grid system
