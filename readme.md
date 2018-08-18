@@ -8,3 +8,9 @@
 
 * Create header and footer partials
 * Add Bootstrap
+
+# Creating new campgrounds
+
+* Add campground POST route
+* install body-parser
+* show forms that can handle add request
