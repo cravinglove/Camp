@@ -5,24 +5,11 @@ var express 	= require("express"),
 	Campground  = require("./models/campground"),
 	seedDB 		= require("./seeds");
 
-seedDB();
-
 mongoose.connect("mongodb://localhost/camp",{ useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
-// Campground.create({
-// 	name: "Sans Luis Valley",
-// 	image: "https://images.unsplash.com/photo-1519708495087-ca1b71df408c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cfa82a18a43ac663a816cab80ad57543&auto=format&fit=crop&w=1056&q=80",
-// 	description: "A beautiful camp!"
-// }, function(err, campground){
-// 	if (err) {
-// 		console.log(err);
-// 	} else {
-// 		console.log(campground);
-// 	}
-// })
-
+seedDB();
 
 app.get("/", function(req, res){
 	res.render("landing");
@@ -68,10 +55,11 @@ app.get("/campgrounds/new", function(req,res){
 // This must below the NEW route!!!
 app.get("/campgrounds/:id", function(req,res){
 	// get ID from request
-	Campground.findById(req.params.id, function(err, foundCampground){
+	Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
 		if(err){
 			console.log(err);
 		}else{
+			console.log(foundCampground);
 			// render show template with that ID
 			res.render("show", {campground: foundCampground});
 		}

@@ -54,3 +54,8 @@
 
 * add a seeds.js file
 * run seeds file every time server starts
+
+# Add comment model
+
+* make error go away
+* show comments on campground page
