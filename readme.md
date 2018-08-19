@@ -34,6 +34,7 @@
 # Show page
 
 * RESTful routes
+
 | name   | url       | verb | desc.                            |
 |--------|-----------|------|----------------------------------|
 | INDEX  | /cats     | GET  | show all cats                    |
@@ -63,6 +64,7 @@
 # Comment new/create
 
 * nested routes
+
 | name   | url                           | verb | desc.                                              |
 |--------|-------------------------------|------|----------------------------------------------------|
 | INDEX  | /campgrounds                  | GET  | show all campgrounds                               |
