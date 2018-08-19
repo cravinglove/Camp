@@ -30,3 +30,16 @@
 * install and configure mongoose
 * set up campground model
 * use campground model inside route
+
+# Show page
+
+* RESTful routes
+	| name   | url       | verb | desc.                            |
+	|--------|-----------|------|----------------------------------|
+	| INDEX  | /cats     | GET  | show all cats                    |
+	| NEW    | /cats/new | GET  | display forms to create new cats |
+	| CREATE | /cats     | POST | add new cat to DB                |
+	| SHOW   | /cats/:id | GET  | show info about one cat          |
+
+* add description to our camps
+* make a show route
