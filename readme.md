@@ -34,12 +34,12 @@
 # Show page
 
 * RESTful routes
-	| name   | url       | verb | desc.                            |
-	|--------|-----------|------|----------------------------------|
-	| INDEX  | /cats     | GET  | show all cats                    |
-	| NEW    | /cats/new | GET  | display forms to create new cats |
-	| CREATE | /cats     | POST | add new cat to DB                |
-	| SHOW   | /cats/:id | GET  | show info about one cat          |
+| name   | url       | verb | desc.                            |
+|--------|-----------|------|----------------------------------|
+| INDEX  | /cats     | GET  | show all cats                    |
+| NEW    | /cats/new | GET  | display forms to create new cats |
+| CREATE | /cats     | POST | add new cat to DB                |
+| SHOW   | /cats/:id | GET  | show info about one cat          |
 
 * add description to our camps
 * make a show route
@@ -59,3 +59,18 @@
 
 * make error go away
 * show comments on campground page
+
+# Comment new/create
+
+* nested routes
+| name   | url                           | verb | desc.                                              |
+|--------|-------------------------------|------|----------------------------------------------------|
+| INDEX  | /campgrounds                  | GET  | show all campgrounds                               |
+| NEW    | /campgrounds/new              | GET  | display forms to create new campgrounds            |
+| CREATE | /campgrounds                  | POST | add new campground to DB                           |
+| SHOW   | /campgrounds/:id              | GET  | show info about one campground                     |
+| NEW    | /campgrounds/:id/comments/new | GET  | display forms to create new comments               |
+| CREATE | /campgrounds/:id/comments     | POST | add new comments associated with campgrounds to DB |
+
+* add the comments new/create route
+* add form to submit comment

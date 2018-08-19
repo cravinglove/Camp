@@ -13,7 +13,7 @@ seedDB();
 
 app.get("/", function(req, res){
 	res.render("landing");
-})
+});
 
 // INDEX - show all campgrounds
 app.get("/campgrounds", function(req, res){
@@ -21,10 +21,10 @@ app.get("/campgrounds", function(req, res){
 		if(err){
 			console.log(err);
 		}else{
-			res.render("index",{campgrounds: allCampgrounds});
+			res.render("campgrounds/index",{campgrounds: allCampgrounds});
 		}
 	})
-})
+});
 
 // CREATE - add new campground to database
 app.post("/campgrounds", function(req, res){
@@ -44,12 +44,12 @@ app.post("/campgrounds", function(req, res){
 			res.redirect("/campgrounds");
 		}
 	})
-})
+});
 
 // NEW - show forms to add new campground
 app.get("/campgrounds/new", function(req,res){
-	res.render("new");
-})
+	res.render("campgrounds/new");
+});
 
 // SHOW - show info about any campground
 // This must below the NEW route!!!
@@ -59,10 +59,20 @@ app.get("/campgrounds/:id", function(req,res){
 		if(err){
 			console.log(err);
 		}else{
-			console.log(foundCampground);
+			// console.log(foundCampground);
 			// render show template with that ID
-			res.render("show", {campground: foundCampground});
+			res.render("campgrounds/show", {campground: foundCampground});
 		}
+	})
+});
+
+// =============
+// COMMENTS ROUTE GOES HERE
+// =============
+
+app.get("/campgrounds/:id/comments/new", function(req,res){
+	Campground.findById(req.params.id, function (err, campground){
+		res.render("comments/new",{campground: campground});		
 	})
 })
 
