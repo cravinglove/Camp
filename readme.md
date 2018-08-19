@@ -43,3 +43,14 @@
 
 * add description to our camps
 * make a show route
+
+# Refactor mongoose code
+
+* make a models directory
+* module.exports
+* require each model rightly
+
+# Add seeds file
+
+* add a seeds.js file
+* run seeds file every time server starts
