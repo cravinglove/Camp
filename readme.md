@@ -76,3 +76,8 @@
 
 * add the comments new/create route
 * add form to submit comment
+
+# Style Show Page
+
+* Add a sidebar to showpage
+* Display comments nicely
