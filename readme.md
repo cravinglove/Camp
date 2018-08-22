@@ -92,3 +92,8 @@
 * Configure passport
 * add register route
 * add register template
+
+# Auth Pt. 3 - Login
+
+* add login route
+* add login template
