@@ -81,3 +81,8 @@
 
 * Add a sidebar to showpage
 * Display comments nicely
+
+# Add user model
+
+* Install all packages for auth
+* define user model
