@@ -82,7 +82,13 @@
 * Add a sidebar to showpage
 * Display comments nicely
 
-# Add user model
+# Auth Pt. 1 - Add user model
 
 * Install all packages for auth
 * define user model
+
+# Auth Pt. 2 - Add register
+
+* Configure passport
+* add register route
+* add register template
